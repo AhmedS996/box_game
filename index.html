@@ -3,34 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Box game</title>
+    <title>Box Game</title>
+    <!-- Link to Bootstrap CSS file -->
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <!-- Link to custom CSS file -->
     <link rel="stylesheet" href="Style/boxes.css" />
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Hello to box game</h1>
-          <h3>Level 1</h3>
+          <!-- Game title and level heading -->
+          <h1 class="text-center">Box Game</h1>
+          <h3 class="text-center">Level 1</h3>
+          <!-- Game description -->
           <p>
-            Box game is a simple game where the objective is to avoid clicking
+            Box Game is a simple game where the objective is to avoid clicking
             on the box that contains a bomb. In each round of the game, there
             will be a set of boxes displayed on the screen, out of which only
             one box contains a bomb. The player must try to click on all the
             boxes except the one with the bomb to win the game.
           </p>
         </div>
-        <div class="modal-body">
+        <div class="col-md-12 text-center">
+          <!-- Button to reload the page and play again -->
           <button class="btn btn-primary" onclick="location.reload()">
             Play Again
           </button>
         </div>
       </div>
       <div class="row" id="boxes">
+        <!-- Boxes for the game, with onclick function to handle box clicks -->
         <div class="col-md-4 col-sm-4">
           <div class="box" id="box1" onclick="handleBoxClick(1)">Box 1</div>
         </div>
@@ -60,17 +66,19 @@
         </div>
       </div>
 
-      <!-- Modal -->
+      <!-- Modal to display when the player loses the game -->
       <div class="modal" id="myModal">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
+              <!-- Header for lose message -->
               <h2 class="modal-title">You Lose!</h2>
               <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
             </div>
             <div class="modal-body">
+              <!-- Button to reload the page and play again -->
               <button class="btn btn-primary" onclick="location.reload()">
                 Play Again
               </button>
@@ -78,20 +86,23 @@
           </div>
         </div>
       </div>
-      <!-- modal of susccesful  -->
+
+      <!-- Modal to display when the player wins the game -->
       <div class="modal" id="myModal_s">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
+              <!-- Header for win message -->
               <h2 class="modal-title">You Win!</h2>
               <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
             </div>
             <div class="modal-body">
+              <!-- Button to go to the next level -->
               <button
                 class="btn btn-primary"
-                onclick="window.location.href = 'view/Level_Two.html'"
+                onclick="window.location.href='view/Level_Two.html'"
               >
                 Go to Next Level
               </button>
@@ -101,7 +112,9 @@
       </div>
     </div>
 
+    <!-- Link to custom JavaScript file -->
     <script src="JS/levelOne.js"></script>
+    <!-- Link to Bootstrap JavaScript file -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
