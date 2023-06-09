@@ -15,6 +15,7 @@
       <div class="row">
         <div class="col-md-12">
           <h1>Hello to box game</h1>
+          <h3>Level 1</h3>
           <p>
             Box game is a simple game where the objective is to avoid clicking
             on the box that contains a bomb. In each round of the game, there
@@ -22,6 +23,11 @@
             one box contains a bomb. The player must try to click on all the
             boxes except the one with the bomb to win the game.
           </p>
+        </div>
+        <div class="modal-body">
+          <button class="btn btn-primary" onclick="location.reload()">
+            Play Again
+          </button>
         </div>
       </div>
       <div class="row" id="boxes">
@@ -67,6 +73,27 @@
             <div class="modal-body">
               <button class="btn btn-primary" onclick="location.reload()">
                 Play Again
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal of susccesful  -->
+      <div class="modal" id="myModal_s">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">You Win!</h2>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <button
+                class="btn btn-primary"
+                onclick="window.location.href = 'view/Level_Two.html'"
+              >
+                Go to Next Level
               </button>
             </div>
           </div>
