@@ -1,22 +1,25 @@
 var bombBox = Math.floor(Math.random() * 9) + 1;
 
+var count = 0;
 function handleBoxClick(boxNumber) {
   var box = document.getElementById("box" + boxNumber);
 
   if (boxNumber === bombBox) {
     box.classList.add("red");
-    console.log("BOOM! Box " + boxNumber + " had a bomb!");
+
     showModal();
   } else {
     box.classList.add("green");
-    console.log("Box " + boxNumber + " was safe.");
-    box.onclick = null; // disable further clicking
 
-    if (boxNumber === 8) {
-      window.location.href = "otherpage.html";
+    box.onclick = null; // disable further clicking
+    count++;
+    var modal_s = document.getElementById("myModal_s");
+    if (count == 8) {
+      modal_s.style.display = "block";
     }
   }
 }
+
 function showModal() {
   // Get the modal
   var modal = document.getElementById("myModal");
