@@ -8,8 +8,73 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="Style/boxes.css" />
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Hello to box game</h1>
+          <p>
+            Box game is a simple game where the objective is to avoid clicking
+            on the box that contains a bomb. In each round of the game, there
+            will be a set of boxes displayed on the screen, out of which only
+            one box contains a bomb. The player must try to click on all the
+            boxes except the one with the bomb to win the game.
+          </p>
+        </div>
+      </div>
+      <div class="row" id="boxes">
+        <div class="col-md-4 col-sm-4">
+          <div class="box" id="box1" onclick="handleBoxClick(1)">Box 1</div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="box" id="box2" onclick="handleBoxClick(2)">Box 2</div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="box" id="box3" onclick="handleBoxClick(3)">Box 3</div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="box" id="box4" onclick="handleBoxClick(4)">Box 4</div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="box" id="box5" onclick="handleBoxClick(5)">Box 5</div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="box" id="box6" onclick="handleBoxClick(6)">Box 6</div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="box" id="box7" onclick="handleBoxClick(7)">Box 7</div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="box" id="box8" onclick="handleBoxClick(8)">Box 8</div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="box" id="box9" onclick="handleBoxClick(9)">Box 9</div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">You Lose!</h2>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <button class="btn btn-primary" onclick="location.reload()">
+                Play Again
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="JS/levelOne.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
